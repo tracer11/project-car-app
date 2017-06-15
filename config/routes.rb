@@ -6,6 +6,8 @@ Rails.application.routes.draw do
   get '/parts' => 'parts#index'
   get '/parts/:id' => 'parts#show'
 
+  post '/ownerships' => 'ownerships#create'
+
   get '/purchases' => 'purchases#index'
 
   get '/signup' => 'users#new'
