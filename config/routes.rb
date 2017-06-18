@@ -9,6 +9,7 @@ Rails.application.routes.draw do
   post '/ownerships' => 'ownerships#create'
 
   get '/purchases' => 'purchases#index'
+  post '/purchases' => 'purchases#create'
 
   get '/signup' => 'users#new'
   post '/users' => 'users#create'
