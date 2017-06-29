@@ -1,0 +1,8 @@
+<h1>Garage</h1>
+<hr>
+<% @cars.each do |car| %>
+  <h2>Make: <%= car.car.make %></h2>
+  <h2>Model: <%= car.car.model %></h2>
+  <h2>Year: <%= car.car.year %></h2>
+  <br>
+<% end %>

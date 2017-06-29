@@ -1,8 +1,8 @@
 class Part < ApplicationRecord
-  belongs_to :category
-  has_many :purchases
-  has_many :cars, through: :purchases
-  has_many :prices
+  # belongs_to :category
+  # has_many :purchases
+  # has_many :cars, through: :purchases
+  # has_many :prices
 
   def lowest_price
     price_collection = prices

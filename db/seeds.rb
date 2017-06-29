@@ -2,7 +2,7 @@
 # Category.create!(category: "Suspenison") 
 # Category.create!(category: "Transmission") 
 # Category.create!(category: "Turbo") 
-# Category.create!(category: "Super Charger") 
+
 # Category.create!(category: "Brakes")
 # Category.create!(category: "Air Intake") 
 # Category.create!(category: "Rims") 
@@ -86,35 +86,6 @@
 
 # Part.create!(name: "PIRELLI", description: "P ZERO CORSA SYSTEM ASIMMETRICO") #287.17
 
-
-PartCategory.create!(part_id: 1, category_id: 1)
-PartCategory.create!(part_id: 2, category_id: 1)
-PartCategory.create!(part_id: 3, category_id: 1)
-PartCategory.create!(part_id: 4, category_id: 2)
-PartCategory.create!(part_id: 5, category_id: 2)
-PartCategory.create!(part_id: 6, category_id: 2)
-PartCategory.create!(part_id: 7, category_id: 3)
-PartCategory.create!(part_id: 8, category_id: 3)
-PartCategory.create!(part_id: 9, category_id: 3)
-PartCategory.create!(part_id: 10, category_id: 4)
-PartCategory.create!(part_id: 11, category_id: 4)
-PartCategory.create!(part_id: 12, category_id: 5)
-PartCategory.create!(part_id: 13, category_id: 5)
-PartCategory.create!(part_id: 14, category_id: 5)
-PartCategory.create!(part_id: 15, category_id: 6)
-PartCategory.create!(part_id: 16, category_id: 6)
-PartCategory.create!(part_id: 17, category_id: 6)
-PartCategory.create!(part_id: 18, category_id: 7)
-PartCategory.create!(part_id: 19, category_id: 7)
-PartCategory.create!(part_id: 20, category_id: 7)
-PartCategory.create!(part_id: 21, category_id: 8)
-PartCategory.create!(part_id: 22, category_id: 8)
-PartCategory.create!(part_id: 23, category_id: 8)
-PartCategory.create!(part_id: 24, category_id: 9)
-PartCategory.create!(part_id: 25, category_id: 9)
-PartCategory.create!(part_id: 26, category_id: 9)
-
-
 # Price.create!(part_id: 1, price: 470.54)
 # Price.create!(part_id: 1, price: 465.54)
 # Price.create!(part_id: 1, price: 470.54)
@@ -151,37 +122,141 @@ PartCategory.create!(part_id: 26, category_id: 9)
 
 
 
-  3.times do
-      i = 0
-    26.times do 
+  # 3.times do
+  #     i = 0
+  #   26.times do 
 
   
-      i += 1
+  #     i += 1
 
-      price = rand(300..1300)
+  #     price = rand(300..1300)
 
-      Price.create!(part_id: i, price: price)
+  #     Price.create!(part_id: i, price: price)
 
-    end
-
-
-  end
+  #   end
 
 
+  # end
+
+
+#exhaust
+
+# require 'nokogiri'
+# require 'open-uri'
+
+# # Fetch and parse HTML document
+# doc = Nokogiri::HTML(open('https://www.carid.com/2005-subaru-wrx-exhaust-systems/'))
+
+# puts "### Search for nodes by css"
+# doc.css('span.lst_a_name').each do |link|
+#   Part.create!(name: link.content)
+# end
+
+# num = 0
+# 62.times do
+#   num += 1
+#   PartCategory.create!(part_id: num, category_id: 1)
+# end
+
+#suspenison
+
+# require 'nokogiri'
+# require 'open-uri'
+
+# # Fetch and parse HTML document
+# doc = Nokogiri::HTML(open('https://www.carid.com/2005-subaru-wrx-suspension-systems/'))
+
+# puts "### Search for nodes by css"
+# doc.css('span.lst_a_name').each do |link|
+#   Part.create(name: link.content)
+# end
+
+
+# num = 62
+# 62.times do
+#   num += 1
+#   PartCategory.create!(part_id: num, category_id: 2)
+# end
+
+#Transmission
+
+# require 'nokogiri'
+# require 'open-uri'
+
+# # Fetch and parse HTML document
+# doc = Nokogiri::HTML(open('https://www.carid.com/2005-subaru-wrx-performance-transmission-parts/'))
+
+# puts "### Search for nodes by css"
+# doc.css('span.lst_a_name').each do |link|
+#   Part.create(name: link.content)
+# end
 
 
 
+# num = 124
+# 61.times do
+#   num += 1
+#   PartCategory.create!(part_id: num, category_id: 3)
+# end
 
+#turbo
 
+# require 'nokogiri'
+# require 'open-uri'
 
+# # Fetch and parse HTML document
+# doc = Nokogiri::HTML(open('https://www.carid.com/2005-subaru-wrx-performance-turbochargers-superchargers/'))
 
+# puts "### Search for nodes by css"
+# doc.css('span.lst_a_name').each do |link|
+#   Part.create!(name: link.content)
+# end
 
+# num = 185
+# 60.times do
+#   num += 1
+#   PartCategory.create!(part_id: num, category_id: 4)
+# end
 
+#brakes
 
+# require 'nokogiri'
+# require 'open-uri'
 
+# # Fetch and parse HTML document
+# doc = Nokogiri::HTML(open('https://www.carid.com/2005-subaru-wrx-brakes/'))
 
+# puts "### Search for nodes by css"
+# doc.css('span.lst_a_name').each do |link|
+#   Part.create!(name: link.content)
+# end
 
+# num = 245
+# 61.times do
+#   num += 1
+#   PartCategory.create!(part_id: num, category_id: 6)
+# end
 
+#air intake
+
+# require 'nokogiri'
+# require 'open-uri'
+
+# # Fetch and parse HTML document
+# doc = Nokogiri::HTML(open('https://www.carid.com/2005-subaru-wrx-air-intakes/'))
+
+# puts "### Search for nodes by css"
+# doc.css('span.lst_a_name').each do |link|
+#   Part.create!(name: link.content)
+# end
+
+# num = 306
+# 63.times do
+#   num += 1
+#   PartCategory.create!(part_id: num, category_id: 7)
+# end
+
+#rims
 
 
 

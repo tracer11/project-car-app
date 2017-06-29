@@ -12,4 +12,11 @@ class PurchasesController < ApplicationController
                     name: params[:name])
     redirect_to '/purchases'
   end
+
+  def destroy
+    purchase = Purchase.find(params[:id])
+    if purchase.destroy
+      flash[:success] = "Part Deleted"
+    end
+  end
 end

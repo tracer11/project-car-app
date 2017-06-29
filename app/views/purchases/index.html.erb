@@ -3,4 +3,7 @@
 <% @purchases.each do |purchase| %>
   <h3>Name: <%= purchase.name %></h3>
   <h3>Price: <%= purchase.price %> </h3>
+  <%= link_to "Remove", "/purchases/#{purchase.id}", method: :destroy do %>
+  <% end %>
+  <br>
 <% end %>
