@@ -1,10 +1,7 @@
 <h1><%= @part.name %></h1>
-<h2>$<%= @part.lowest_price %></h2>
+<% @part.prices.each do |price_obj| %>
+  <h2><%= price_obj.price %></h2>
+<% end %> 
 
-<%= form_tag "/purchases", method: :post do %>
-  <input type="hidden" name="price" value="<%= @part.lowest_price %>">
-  <input type="hidden" name="part_id" value="<%= @part.id %>">
-  <input type="hidden" name="name" value="<%= @part.name %>">
-  <input type="submit" value="Add to Cart">
-<% end %>
+
 

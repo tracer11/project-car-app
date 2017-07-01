@@ -1,7 +1,6 @@
-<h1>Category</h1>
+<h1><%= @category %></h1>
 
 <% @parts.each do |part| %>
-  <h2>Name: <a href="/parts/<%= part.id %>"> <%= part.name %></a></h2>
-  <h3>Description: <%= part.description %></h3>
+  <h4>Name: <a href="/parts/<%= part.id %>"> <%= part.name %></a></h4>
   <br>
 <% end %>
