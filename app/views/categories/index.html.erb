@@ -1,9 +1,11 @@
 <h1>Categories</h1>
 
-<% @categories.each do |x| %>
-  <a href="/parts?category=<%= x.category %>"><%= x.category %></a>
-  <br>
-<% end %>
+<div class="col-lg-12">
+  <% @categories.each do |x| %>
+    <a href="/parts?category=<%= x.category %>"><%= x.category %></a>
+    <br>
+  <% end %> 
+</div>
 
 
 

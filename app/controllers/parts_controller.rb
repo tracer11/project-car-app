@@ -10,5 +10,6 @@ class PartsController < ApplicationController
 
   def show
     @part = Part.find(params[:id])
+    @price = Price.find(params[:id])
   end
 end
