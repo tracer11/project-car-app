@@ -1,5 +1,5 @@
 Rails.application.routes.draw do
-  get '/cars' => 'cars#index'
+  # get '/cars' => 'cars#index'
   get '/cars/new' => 'cars#new'
   post '/cars' => 'cars#create'
 

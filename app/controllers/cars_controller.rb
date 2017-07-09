@@ -3,6 +3,10 @@ class CarsController < ApplicationController
     @cars = Ownership.all.where(user_id: current_user.id)
   end
 
+  def new
+    @cars = Car.all
+  end
+
 
   def create
     @car = Car.create(

@@ -1,6 +1,8 @@
 <h1><%= @part.name %></h1>
-<% @part.prices.each do |price_obj| %>
-  <h2><%= price_obj.price %></h2><a target="_blank" href="https://<%= @price.link %>"><%= @price.link %></a>
+<% @prices.each do |price_obj| %>
+  <h2><%= price_obj.price %></h2>
+  <a target="_blank" href="<%= price_obj.link %>"><%= price_obj.link %></a>
+  <hr>
 <% end %> 
 
 

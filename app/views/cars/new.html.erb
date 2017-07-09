@@ -1,14 +1,7 @@
-<h1>Pick Your Car</h1>
 
-<%= form_tag "/cars", method: :post do%> 
-  <div>
-    <h3>Make:<input type="text" name="make"></h3>
-  </div>
-  <div>
-    <h3>Model:<input type="text" name="model"></h3>
-  </div>
-  <div>
-    <h3>Year:<input type="integer" name="year"></h3>
-  </div>
-  <input type="submit" value="Next">
-<% end %>
+
+
+ <%= cars = options_from_collection_for_select(@cars, 'make','model') %>
+<%= select :all_val, cars %>
+
+
