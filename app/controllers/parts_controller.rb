@@ -1,11 +1,10 @@
 class PartsController < ApplicationController
   def index
-    @parts = Part.all
     @category = params[:category]
+    car = Car.second
+    @parts = Category.find_by(category: @category).parts.where(car_id: car.id)
+   
 
-    if @category
-      @parts = Category.find_by(category:@category).parts
-    end
   end
 
   def show
