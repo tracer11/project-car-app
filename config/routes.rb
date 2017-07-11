@@ -1,11 +1,9 @@
 Rails.application.routes.draw do
-  get '/cars' => 'cars#index'
-  post '/cars' => 'cars#create'
-
   get '/' => 'categories#index'
   get '/parts' => 'parts#index'
   get '/parts/:id' => 'parts#show'
 
+  get '/ownerships/new' => 'ownerships#new'
   post '/ownerships' => 'ownerships#create'
 
   get '/purchases' => 'purchases#index'

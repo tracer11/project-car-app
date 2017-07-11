@@ -1,0 +1,10 @@
+<h1>Choose Your Car Here</h1>
+
+<%= form_tag '/ownerships', method: :post do %>
+  <select name="car_id">
+    <%= @cars.each do |car| %>
+    <option value="<%= car.id %>"><%= car.make %><%= car.model %></option>
+    <% end %>
+  </select>
+  <input type="submit" value="Choose Car">
+<% end %> 
