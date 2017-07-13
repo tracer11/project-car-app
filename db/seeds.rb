@@ -176,8 +176,8 @@
 # require 'open-uri'
 
 # # Fetch and parse HTML document
-# num = 42
-# doc = Nokogiri::HTML(open('https://www.carid.com/1997-nissan-skyline-exhaust-systems/'))
+# num = 120
+# doc = Nokogiri::HTML(open('https://www.carid.com/1997-toyota-supra-exhaust-systems/'))
 # puts "### Search for nodes by css"
 # doc.css('div.lst_main a').take(5).each do |link|
 #   num += 1
@@ -189,8 +189,8 @@
 # require 'open-uri'
 
 # # Fetch and parse HTML document
-# num = 47
-# doc = Nokogiri::HTML(open('https://www.carid.com/1997-nissan-skyline-suspension-systems/'))
+# num = 125
+# doc = Nokogiri::HTML(open('https://www.carid.com/1997-toyota-supra-suspension-systems/'))
 # puts "### Search for nodes by css"
 # doc.css('div.lst_main a').take(5).each do |link|
 #   num += 1
@@ -202,8 +202,8 @@
 # require 'open-uri'
 
 # # Fetch and parse HTML document
-# num = 52
-# doc = Nokogiri::HTML(open('https://www.carid.com/1997-nissan-skyline-performance-transmission-parts/'))
+# num = 130
+# doc = Nokogiri::HTML(open('https://www.carid.com/1997-toyota-supra-performance-transmission-parts/'))
 # puts "### Search for nodes by css"
 # doc.css('div.lst_main a').take(5).each do |link|
 #   num += 1
@@ -215,8 +215,8 @@
 # require 'open-uri'
 
 # # Fetch and parse HTML document
-# num = 57
-# doc = Nokogiri::HTML(open('https://www.carid.com/1997-nissan-skyline-performance-turbochargers-superchargers/'))
+# num = 135
+# doc = Nokogiri::HTML(open('https://www.carid.com/1997-toyota-supra-performance-turbochargers-superchargers/'))
 # puts "### Search for nodes by css"
 # doc.css('div.lst_main a').take(5).each do |link|
 #   num += 1
@@ -228,8 +228,8 @@
 # require 'open-uri'
 
 # # Fetch and parse HTML document
-# num = 62
-# doc = Nokogiri::HTML(open('https://www.carid.com/1997-nissan-skyline-brakes/'))
+# num = 140
+# doc = Nokogiri::HTML(open('https://www.carid.com/1997-toyota-supra-brakes/'))
 # puts "### Search for nodes by css"
 # doc.css('div.lst_main a').take(5).each do |link|
 #   num += 1
@@ -241,8 +241,8 @@
 # require 'open-uri'
 
 # # Fetch and parse HTML document
-# num = 67
-# doc = Nokogiri::HTML(open('https://www.carid.com/1997-nissan-skyline-air-intakes/'))
+# num = 145
+# doc = Nokogiri::HTML(open('https://www.carid.com/1997-toyota-supra-air-intakes/'))
 # puts "### Search for nodes by css"
 # doc.css('div.lst_main a').take(5).each do |link|
 #   num += 1
@@ -254,8 +254,8 @@
 # require 'open-uri'
 
 # # Fetch and parse HTML document
-# num = 72
-# doc = Nokogiri::HTML(open('https://www.carid.com/1997-nissan-200sx-wheels/'))
+# num = 150
+# doc = Nokogiri::HTML(open('https://www.carid.com/1997-toyota-supra-wheels/?filter=1&submodel=204219880'))
 # puts "### Search for nodes by css"
 # doc.css('div.lst_main a').take(5).each do |link|
 #   num += 1
@@ -267,19 +267,31 @@
 # require 'open-uri'
 
 # # Fetch and parse HTML document
-# num = 77
-# doc = Nokogiri::HTML(open('https://www.carid.com/tires/track-competition/'))
+# num = 155
+# doc = Nokogiri::HTML(open('https://www.carid.com/1997-toyota-supra-tires/?filter=1&frontSize=235-45-r17&rearSize=255-40-r17&submodel=204219881'))
 # puts "### Search for nodes by css"
 # doc.css('div.lst_main a').take(5).each do |link|
 #   num += 1
 #   p num
 #    Link.create!(price_id: num, url: "https://www.carid.com" + link['href'])
 # end
+num = 0
+Link.all.each do |link_obj|
+  num += 1
+  require 'nokogiri'
+  require 'open-uri'
 
-# require 'nokogiri'
-# require 'open-uri'
+  # Fetch and parse HTML document
+  doc = Nokogiri::HTML(open(link_obj.url))
 
-# # Fetch and parse HTML document
+  puts "### Search for nodes by css"
+  doc.css('div.see-more-wrap p').take(2).each do |link|
+    Description.create(part_id: num, content: link.content)
+  end
+
+end
+
+
 
 
 

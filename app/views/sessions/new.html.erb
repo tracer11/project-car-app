@@ -1,10 +1,10 @@
 <h1>Log In Here</h1>
 <%= form_tag "/login", method: :post do %>
   <div>
-    Name: <input type="text" name="name">
+    <input type="text" name="name" placeholder="User Name">
   </div>
   <div>
-    Password: <input type="password" name="password">
+    <input type="password" name="password" placeholder="Password">
   </div>
-  <input type="submit" value="Submit">
+  <input type="submit" value="Sign In">
 <% end %>

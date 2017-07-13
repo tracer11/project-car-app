@@ -1,16 +1,16 @@
 <h1>Sign Up Here</h1>
 <%= form_tag '/users', method: :post do %>
 <div>
- Name: <input type="text" name="name"> 
+ <input type="text" name="name" placeholder="User Name"> 
 </div>
 <div>
- Email: <input type="email" name="email"> 
+ <input type="email" name="email" placeholder="Email"> 
 </div>
 <div>
- Password: <input type="password" name="password"> 
+ <input type="password" name="password" placeholder="Password"> 
 </div>
 <div>
- Confirm Password: <input type="password" name="password_confirmation"> 
+ <input type="password" name="password_confirmation" placeholder="Confirm Password"> 
 </div>
-<input type="submit" value="Submit">
+<input type="submit" value="Sign Up">
 <% end %>

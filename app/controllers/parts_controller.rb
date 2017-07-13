@@ -1,8 +1,8 @@
 class PartsController < ApplicationController
   def index
     @category = params[:category]
-    @car = current_user.ownerships.last.car_id
-    if @car
+    if current_user
+      @car = current_user.ownerships.last.car_id
       @parts = Category.find_by(category: @category).parts.where(car_id: @car)
     else
       @parts = Category.find_by(category: @category).parts

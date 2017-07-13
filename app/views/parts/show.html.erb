@@ -1,9 +1,10 @@
-<h1><%= @part.name %></h1>
-<% @prices.each do |price_obj| %>
-  <h2><%= price_obj.price %></h2>
-  <a target="_blank" href="<%= price_obj.link %>"><%= price_obj.link %></a>
+<h4 id="name"><a class="link" target="_blank" href="<%= @prices.first.link %>"><%= @part.name %> </a> </h4>
+<h4 class="content">Description: <%= @part.descriptions.second.content %> </h4>
+<% #@prices.each do |price_obj| %>
+  <h4 class="content">Price: <%= @prices.first.price %></h4>
+  
   <hr>
-<% end %> 
+<% #end %> 
 
 
 
