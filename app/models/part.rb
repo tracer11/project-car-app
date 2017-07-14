@@ -3,6 +3,7 @@ class Part < ApplicationRecord
   has_many :prices
   belongs_to :car
   has_many :descriptions
+  has_many :images
 
   def lowest_price
     price_collection = prices

@@ -5,11 +5,7 @@ Rails.application.routes.draw do
 
   get '/ownerships/new' => 'ownerships#new'
   post '/ownerships' => 'ownerships#create'
-
-  get '/purchases' => 'purchases#index'
-  post '/purchases' => 'purchases#create'
-  delete '/purchases/:id' => 'purchases#destroy' 
-
+  
   get '/signup' => 'users#new'
   post '/users' => 'users#create'
 
