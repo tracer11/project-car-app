@@ -1,7 +1,7 @@
 <h1><%= @category %></h1>
 
 <% @parts.each do |part| %>
-  <img class="tec" src="<%= part.images.first.url %>" alt="">
+  <img src="<%= part.images.first.url%>" alt="">
   <h4>Name: <a href="/parts/<%= part.id %>"> <%= part.name %></a></h4>
   <hr>
 <% end %>
