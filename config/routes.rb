@@ -3,6 +3,8 @@ Rails.application.routes.draw do
   get '/parts' => 'parts#index'
   get '/parts/:id' => 'parts#show'
 
+  post '/reviews' => 'reviews#create'
+
   get '/ownerships/new' => 'ownerships#new'
   post '/ownerships' => 'ownerships#create'
   
@@ -12,6 +14,5 @@ Rails.application.routes.draw do
   get '/login' => 'sessions#new'
   post '/login' => 'sessions#create'
   get '/logout' => 'sessions#destroy'
-
 
 end

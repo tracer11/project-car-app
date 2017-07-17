@@ -1,8 +1,32 @@
 <h4 id="name"><a class="link" target="_blank" href="<%= @prices.first.link %>"><%= @part.name %> </a> </h4>
 <h4 class="content">Description: <%= @part.descriptions.second.content %> </h4>
+<h4 class="content">Price: <%= @prices.first.price %></h4>
+<br>
 
-  <h4 class="content">Price: <%= @prices.first.price %></h4>
-  <hr>
+
+<h5>Leave a Review</h5>
+<%= form_tag '/reviews', method: :post do%>
+  <div>
+    <input type="text" name="review_text">
+  </div>
+  <div>
+    <input type="hidden" name="part_id" value="<%= @part.id %>">
+  </div>
+  <div>
+    <input type="submit" value="Submit">
+  </div>
+<% end %>
+
+<h5>Reviews</h5>
+<% if @reviews.count > 0 %>
+  <% @reviews.each do |review| %>
+    <ul>
+      <li><%= review.review_text %></li>
+    </ul>
+  <% end %>
+<% else %>
+  <p>No Reviews Yet</p>
+<% end %>  
 
 
 

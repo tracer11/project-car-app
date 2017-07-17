@@ -13,5 +13,6 @@ class PartsController < ApplicationController
   def show
     @part = Part.find(params[:id])
     @prices = Price.all.where(part_id: @part)
+    @reviews = Review.all.where(part_id: @part)
   end
 end
