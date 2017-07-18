@@ -20,9 +20,9 @@
 <h5>Reviews</h5>
 <% if @reviews.count > 0 %>
   <% @reviews.each do |review| %>
-    <ul>
-      <li><%= review.review_text %></li>
-    </ul>
+    <p><%= review.user.name %></p>
+    <h6><%= review.review_text %></h6>
+    <hr>
   <% end %>
 <% else %>
   <p>No Reviews Yet</p>

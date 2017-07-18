@@ -8,6 +8,27 @@
 # Category.create!(category: "Tires") 
 
 
+Image.create!(url:"https://s-media-cache-ak0.pinimg.com/736x/c3/c0/98/c3c0985ac7c0d26ed45b116ec298be8d--performance-exhaust-chevrolet.jpg" , category_id: 1)
+Image.create!(url:"http://www.jscspeed.com/images/catalog/category30929_thumb_full.jpg" , category_id: 2)
+Image.create!(url: "https://res.cloudinary.com/kartrocket/image/fetch/w_600,q_auto,h_600,c_pad,b_white,f_auto,fl_progressive/http%3A%2F%2Fkartrocket-mtp.s3.amazonaws.com%2Fall-stores%2Fimage_jazzmyride%2Fdata%2F116486.jpg" , category_id: 3)
+Image.create!(url:"https://www.dhresource.com/600x600/f2/albu/g4/M00/C1/8F/rBVaEVfDwC2AYJm3AAp1Zbhq0-o088.jpg" , category_id: 4)
+Image.create!(url:"http://www.bigbrakes4u.co.uk/images/uploads/SmartRacing/300mmFrontBrakeKit/Smarts4uracing-Brakekit300mm4.jpg" , category_id: 5)
+Image.create!(url:"https://www.carid.com/ic/injen/page/gallery/injen-air-intake_7.jpg" , category_id: 6)
+Image.create!(url:"http://i.ebayimg.com/images/i/361000036970-0-1/s-l1000.jpg" , category_id: 7)
+Image.create!(url:"https://www.tirestickers.com/wp-content/uploads/2016/11/Toyo2-600x600.jpg" , category_id: 8)
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 # #exhaust
 
